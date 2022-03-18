@@ -1,0 +1,25 @@
+{
+  "name": "toni",
+  "version": "1.0.0",
+  "description": "Este es el curso de Fundamentos de Node.js de Platzi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toniblopez/Curso-Fundamentos-Node.js-Platzi.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Toni B. Lopez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toniblopez/Curso-Fundamentos-Node.js-Platzi/issues"
+  },
+  "homepage": "https://github.com/toniblopez/Curso-Fundamentos-Node.js-Platzi#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0"
+  }
+}

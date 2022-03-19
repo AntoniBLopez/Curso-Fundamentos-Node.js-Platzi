@@ -35,13 +35,83 @@ function asyncTwo(name, secondCallback) {
     }, 1000);
 }
 
+function speak(callback) {
+    setTimeout(() => {
+        console.log('bla bla bla bla bla...')
+        callback()
+    },1000)
+}
+
 asyncOne('Toni', (name) => {
 
-    asyncTwo(name, () => {
+    speak(() => {
 
-        setInterval(() => { // setInterval se ejecuta de forma infinita cada X tiempo que le hayamos añadido
+        asyncTwo(name, () => {
 
-            console.log('Soy más compejo aún '+ name);
-        }, 1000);
+            setInterval(() => { // setInterval se ejecuta de forma infinita cada X tiempo que le hayamos añadido
+
+                console.log('Soy más compejo aún '+ name);
+            }, 1000);
+        })
+    })
+
+})
+
+
+// Test Two part 2: ( Callback Hell )
+
+function primeraFuncion (callback) {
+    console.log('Inicia proceso')
+    callback()
+}
+
+function saludo (callback) {
+    setTimeout(() => {
+        console.log('Hola Toni')
+        callback()
+    }, 1000);
+}
+
+function async (callback, callbackTwo) {
+    setTimeout(() => {
+        console.log('Soy asíncrona y me ejecuto después de adiós')
+        callbackTwo()
+    }, 5000)
+    callback()
+}
+
+function segundaFuncion (callback) {
+    console.log('Penúltimo Adios')
+    callback()
+}
+
+function hablar (iteraciones, callback) {
+    setTimeout(() => {
+        if(iteraciones > 0) {
+            console.log('bla bla bla...')
+            hablar(--iteraciones, callback)
+        } else {
+            segundaFuncion(callback)
+        }
+    }, 1000)
+}
+
+function testFunction() {
+    setTimeout(() => {
+        console.log('Soy la última función de prueba')
+    }, 1000)
+}
+
+function adios () {
+    console.log('Adios Toni')
+}
+
+primeraFuncion(() => {
+    saludo(() => {
+        async(() => {
+            hablar(3, () => {
+                adios()
+            })
+        }, testFunction)
     })
 })

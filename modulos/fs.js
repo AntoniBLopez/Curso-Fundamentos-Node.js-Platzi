@@ -7,11 +7,11 @@ function read (path) {
         if (error) {
             console.error('He fallado al leer el archivo')
         } else {
-            console.log(String(datos))
+            console.log(String(datos))  // devuelve un dato tipo Buffer y con String(datos) o datos.toString() lo pasamos a string.
         }
     })
 }
-read(__dirname + '/texto.txt')
+read(__dirname + '/texto.txt')  // __dirname = devuelve la ruta de la carpeta en la que estamos
 
 
 // Crear un archivo de texto ( txt ) con fs.writeFile():
@@ -19,7 +19,7 @@ read(__dirname + '/texto.txt')
 function write (path, newData) {
     fs.writeFile(path, newData, (error) => {
         if (error) {
-            console.warn('No se ha podido crear el nuevo archivo')
+            console.error('No se ha podido crear el nuevo archivo')
         } else {
             console.log('Se ha creado correctamente')
         }

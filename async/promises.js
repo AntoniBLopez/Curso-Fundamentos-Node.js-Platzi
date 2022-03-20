@@ -40,5 +40,30 @@ primeraFuncion('Toni', 'Primera función')
     .then(hablar)
     .then(despedida)
     .catch(aa => {      // No importa el parámetro que le pasaes y tampoco importa si no existe, sirve para capturar el error ( ver dónde está )
-        console.log(aa) // se hace un console.log de el nombre del primer parámetro que es el de capturar el error y muestra cuál ha sido el error y dónde está
+        console.log(aa.message) // se hace un console.log de el nombre del primer parámetro que es el de capturar el error y muestra cuál ha sido el error y dónde está
+    }) // el .message es para que solo muestre el mensage que he escrito en el throw new Error(MESSAGE), aquí sí que tiene que se la palabra message en concreto, si no no funciona
+
+
+
+//  Promesas dentro de un array y con variables:
+
+
+const recordVideoOne = new Promise((resolve, reject) => {
+    resolve('Video 1 Recorded')
+})
+const recordVideoTwo = new Promise((resolve, reject) => {
+    resolve('Video 2 Recorded')
+})
+const recordVideoThree = new Promise((resolve, reject) => {
+    resolve('Video 3 Recorded')
+})
+
+Promise.all([
+    recordVideoOne,
+    recordVideoTwo,
+    recordVideoThree
+])
+    .then((messages) => {
+        console.log(messages)
     })
+    .catch()

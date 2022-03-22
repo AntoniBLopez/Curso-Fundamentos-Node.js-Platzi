@@ -21,7 +21,7 @@ http.createServer((req, res) => {
 
     // Primero tiene que ir el .writeHead y después el .write para que se ejecute el código, si no, peta. Comprobado.
 
-    res.writeHead(201, { 'Content-Type': 'text/plane' }) // Escribir cabecera
+    res.writeHead(201, { 'Content-Type': 'text/plain' }) // Escribir cabecera
     // Enviamos como status (o código de autentifiación) 201 que indica que hemos creado un archivo y todo está OK
 
     res.write('Hola, estoy usando el modulo http de node.js') // escribir respuesta al usuario

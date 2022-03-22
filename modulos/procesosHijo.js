@@ -13,7 +13,7 @@ exec('git add .', (error, stdout, stderr) => {
 
 // git commit -m""
 
-exec('git commit -m"Proceso entero automatizado ( add, commit, pull & push )"', (error, stdout, stderr) => {
+exec('git commit -m"I add new update"', (error, stdout, stderr) => {
     if (error) {
         console.error(error)
         return false

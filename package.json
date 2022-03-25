@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ./herramientas/electron",
     "build": "gulp build",
     "serve": "gulp serve"
   },
@@ -24,7 +25,8 @@
   "dependencies": {
     "bcrypt": "^5.0.1",
     "dotenv": "^16.0.0",
-    "gulp": "^4.0.2",
+    "electron": "^17.2.0",
+    "gulp": "^3.9.1",
     "gulp-server-livereload": "^1.0.1",
     "moment": "^2.29.1",
     "puppeteer": "^13.5.1",

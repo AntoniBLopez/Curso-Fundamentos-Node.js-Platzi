@@ -1,2 +1,5 @@
-# Curso-Fundamentos-Node.js-Platzi
-Este es el curso de Fundamentos de Node.js de Platzi
+# 🐱‍👤 Curso Fundamentos Node.js Platzi
+
+He aprendido Node.js entre otras cosas relacionadas con la parte backend
+
+#### Curso finalizado, conceptos entendidos, gracias por ver mis repositorios! 👍
